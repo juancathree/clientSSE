@@ -6,8 +6,9 @@ if(typeof(EventSource) !== "undefined") {
     console.log("no soported")
   }
 
-var eventSource = new EventSource("http://localhost:3000/api/travels/polling/606c825886e1b613c7a86994")
+var eventSource = new EventSource("http://localhost:3000/api/travels/polling/609147fc407393a0ea707aea")
 
 eventSource.onmessage = function(e) {
-  console.log(e)
+  console.log(e.data)
+  console.log("")
 }
